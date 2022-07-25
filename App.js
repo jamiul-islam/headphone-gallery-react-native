@@ -51,11 +51,8 @@ export default function App() {
     <Provider store={store}>
       <SafeAreaProvider>
         <View style={styles.androidSafeArea} onLayout={onLayoutRootView}>
-          <Text preset="h1" textColor="white">
-            Welcome
-          </Text>
           <Navigation />
-          <StatusBar backgroundColor={colors.black} />
+          <StatusBar backgroundColor={colors.grey} />
           <FlashMessage position="top" floating statusBarHeight={30} />
         </View>
       </SafeAreaProvider>
@@ -67,6 +64,6 @@ const styles = StyleSheet.create({
   androidSafeArea: {
     flex: 1,
     paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-    backgroundColor: colors.black,
+    backgroundColor: colors.white,
   },
 });
