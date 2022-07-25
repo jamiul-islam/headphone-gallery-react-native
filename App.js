@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { StyleSheet, View, Platform, StatusBar } from "react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
+import { enableScreens } from "react-native-screens";
 import FlashMessage from "react-native-flash-message";
 import { Provider } from "react-redux";
 import store from "./store";
@@ -9,6 +10,9 @@ import { colors } from "./theme/Colors";
 import Text from "./components/text/text";
 import * as SplashScreen from "expo-splash-screen";
 import * as Font from "expo-font";
+import Navigation from "./navigation";
+
+enableScreens(false);
 
 export default function App() {
   const [appIsReady, setAppIsReady] = useState(false);
@@ -50,6 +54,7 @@ export default function App() {
           <Text preset="h1" textColor="white">
             Welcome
           </Text>
+          <Navigation />
           <StatusBar backgroundColor={colors.black} />
           <FlashMessage position="top" floating statusBarHeight={30} />
         </View>
