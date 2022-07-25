@@ -6,8 +6,8 @@ import Headphones from "../screens/headphones";
 import Details from "../screens/product-details";
 import Earphones from "../screens/earphones";
 import Speakers from "../screens/speakers";
-import cart from "../screens/cart";
-import checkout from "../screens/checkout";
+import Cart from "../screens/cart";
+import Checkout from "../screens/checkout";
 
 const THEME = {
   ...DefaultTheme,
@@ -20,7 +20,7 @@ const THEME = {
 const HomeStack = createNativeStackNavigator();
 function HomeStackScreen() {
   return (
-    <HomeStack.Navigator>
+    <HomeStack.Navigator screenOptions={{ headerShown: false }}>
       <HomeStack.Screen name="Home" component={Home} />
     </HomeStack.Navigator>
   );
@@ -28,7 +28,7 @@ function HomeStackScreen() {
 const HeadphonesStack = createNativeStackNavigator();
 function HeadphonesStackScreen() {
   return (
-    <HeadphonesStack.Navigator>
+    <HeadphonesStack.Navigator screenOptions={{ headerShown: false }}>
       <HeadphonesStack.Screen name="Headphones" component={Headphones} />
       <HeadphonesStack.Screen name="Details" component={Details} />
     </HeadphonesStack.Navigator>
@@ -38,7 +38,7 @@ function HeadphonesStackScreen() {
 const EarphonesStack = createNativeStackNavigator();
 function EarphonesStackScreen() {
   return (
-    <EarphonesStack.Navigator>
+    <EarphonesStack.Navigator screenOptions={{ headerShown: false }}>
       <EarphonesStack.Screen name="Earphones" component={Earphones} />
       <EarphonesStack.Screen name="Details" component={Details} />
     </EarphonesStack.Navigator>
@@ -48,7 +48,7 @@ function EarphonesStackScreen() {
 const SpeakersStack = createNativeStackNavigator();
 function SpeakersStackScreen() {
   return (
-    <SpeakersStack.Navigator>
+    <SpeakersStack.Navigator screenOptions={{ headerShown: false }}>
       <SpeakersStack.Screen name="Speakers" component={Speakers} />
       <SpeakersStack.Screen name="Details" component={Details} />
     </SpeakersStack.Navigator>
@@ -58,9 +58,9 @@ function SpeakersStackScreen() {
 const CartStack = createNativeStackNavigator();
 function CartStackScreen() {
   return (
-    <CartStack.Navigator>
-      <CartStack.Screen name="Cart" component={cart} />
-      <CartStack.Screen name="Checkout" component={checkout} />
+    <CartStack.Navigator screenOptions={{ headerShown: false }}>
+      <CartStack.Screen name="Cart" component={Cart} />
+      <CartStack.Screen name="Checkout" component={Checkout} />
     </CartStack.Navigator>
   );
 }

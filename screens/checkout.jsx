@@ -2,7 +2,7 @@ import { StyleSheet, View } from "react-native";
 import React from "react";
 import Text from "../components/text/text";
 
-export default function checkout() {
+export default function Checkout() {
   return (
     <View>
       <Text>checkout</Text>
